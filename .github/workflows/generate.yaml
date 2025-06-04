@@ -1,0 +1,60 @@
+name: Generate and Deploy Board List
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    outputs:
+      build_success: ${{ steps.generate_files.outcome == 'success' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Generate site files
+        id: generate_files
+        run: python generate.py
+
+      - name: Upload build artifacts
+        if: github.event_name == 'pull_request' || failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build-output
+          path: out/
+
+  deploy-to-gh-pages:
+    needs: build-and-validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.build-and-validate.outputs.build_success == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository (main branch for source)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Generate site files again (or download artifact)
+        run: python generate.py
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out

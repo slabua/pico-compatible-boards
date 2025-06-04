@@ -1,0 +1,8 @@
+name: "Raspberry Pi Pico"
+chip: "RP2040"
+flash: "2 MB"
+ram: "264 KB"
+usb: "micro"
+smd: true
+image: "https://www.mouser.se/images/marketingid/2022/img/127818871.png"
+url: "https://www.raspberrypi.com/products/raspberry-pi-pico/"
