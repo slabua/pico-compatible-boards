@@ -1,4 +1,4 @@
-name: "Banana Pi BPI-PicoW-S3
+name: "Banana Pi BPI-PicoW-S3"
 chip: "ESP32-S3"
 cores: "2x Xtensa LX7"
 flash: "8 MB"

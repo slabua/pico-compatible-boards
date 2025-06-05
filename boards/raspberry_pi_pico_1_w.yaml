@@ -9,5 +9,5 @@ connectivity: ["WiFi", "BLE"]
 connectors: []
 smd: true
 notes: ""
-image: "https://se.farnell.com/productimages/large/en_GB/3996082-40.jpg"
+image: "https://shop.pimoroni.com/cdn/shop/products/PICOWHEROTRANSPARENT.jpg"
 url: "https://www.raspberrypi.com/products/raspberry-pi-pico/"

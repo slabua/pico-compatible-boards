@@ -15,25 +15,31 @@ BOARD_SCHEMA = {
     'properties': {
         'name': { 'type': 'string' },
         'chip': { 'type': 'string' },
-        'flash': { 'type': 'string', 'pattern': '^\\d+\\s*(KB|MB|GB)$' },
+        'cores': { 'type': 'string' },
+        'flash': { 'type': 'string', 'pattern': '^(\\d+\\s*(KB|MB|GB)|0)$' },
         'ram': { 'type': 'string', 'pattern': '^\\d+\\s*(KB|MB|GB)$' },
         'usb': { 'type': 'string', 'enum': [ 'micro', 'type-c' ] },
+        'dimensions': { 'type': 'string' },
         'connectivity': {
             'type': 'array',
-            'items': { 'type': 'string', 'enum': [ 'wifi', 'ble', 'lora', 'zigbee', 'ethernet' ] }
+            'items': { 'type': 'string', 'enum': [ 'WiFi', 'BLE', 'Lora', 'Zigbee', 'Ethernet' ] }
+        },
+        'connectors': {
+            'type': 'array',
+            'items': { 'type': 'string', 'enum': [ 'Qwiic', 'SP/CE', 'PiDebug', 'BConnect', 'CSI', 'microSD', 'RJ45', 'RTC', 'LiPo-PH2.0', 'LiPo-MX1.25', 'CAN' ] }
         },
         'smd': { 'type': 'boolean' },
+        'notes': {'type': [ 'string', 'null' ] },
         'image': { 'type': [ 'string', 'null' ], 'format': 'uri' },
-        'url': { 'type': [ 'string', 'null' ], 'format': 'uri' },
-        'notes': {'type': [ 'string', 'null' ] }
+        'url': { 'type': [ 'string', 'null' ], 'format': 'uri' }
     },
-    'required': [ 'name', 'chip', 'flash', 'ram', 'usb', 'smd', 'image', 'url' ],
+    'required': [ 'name', 'chip', 'cores', 'flash', 'ram', 'usb', 'dimensions', 'smd', 'image', 'url' ],
     'additionalProperties': False
 }
 
 
 def parse_memory_size(size_str):
-    if not size_str:
+    if not size_str or size_str == '0':
         return 0
 
     match = re.match(r'(\d+)\s*(KB|MB|GB)', size_str.upper())
@@ -60,9 +66,21 @@ def generate_thumbnail(image_url, max_size=(64, 64), quality=85):
         return None
 
     try:
-        print(f'\t\tDownloading image from: {image_url}')
+        print('\tFetching image... ', end='\r')
 
-        image_data = requests.get(image_url).content
+        req = requests.get(image_url, stream=True, timeout=10)
+
+        total_size = int(req.headers.get('content-length', 0))
+        downloaded = 0
+        image_data = bytearray()
+
+        with req as r:
+            r.raise_for_status()
+            for chunk in r.iter_content(1024):
+                downloaded += len(chunk)
+                image_data.extend(chunk)
+                print(f'\tFetching image... {downloaded / total_size:.0%}', end='\r')
+        print('', end='\r')
 
         with Image.open(io.BytesIO(image_data)) as img:
             if img.mode in ('RGBA', 'LA', 'P'):
@@ -85,7 +103,7 @@ def generate_thumbnail(image_url, max_size=(64, 64), quality=85):
 
             return 'data:image/jpeg;base64,' + base64.b64encode(buffer.read()).decode('utf-8')
     except Exception as e:
-        print(f'\t\tError generating thumbnail: {e}')
+        print(f'\tError generating thumbnail: {e}')
         return None
 
 
@@ -110,11 +128,14 @@ def main():
     all_data = []
     data_valid = True
 
-    for filename in os.listdir(boards_dir):
+    files = os.listdir(boards_dir)
+    files.sort()
+
+    for filename in files:
         if not filename.endswith('.yaml') or filename == '_template.yaml':
             continue
 
-        print(f'Processing "{filename}" ...')
+        print(f'Processing "{filename}"...')
 
         filepath = os.path.join(boards_dir, filename)
         try:
@@ -127,6 +148,7 @@ def main():
             board_data['ram_bytes'] = parse_memory_size(board_data.get('ram'))
 
             board_data.setdefault('connectivity', [])
+            board_data.setdefault('connectors', [])
             board_data.setdefault('notes', '')
             board_data.setdefault('thumbnail', None)
 
@@ -155,7 +177,7 @@ def main():
     json_path = os.path.join(output_dir, 'board_data.json')
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump({'data': all_data}, f, indent=2)
-    print(f'\nSuccessfully wrote {len(all_data)} boards to "{json_path}"!')
+    print(f'Successfully wrote {len(all_data)} boards to "{json_path}"!')
 
     for item in os.listdir(template_dir):
         src = os.path.join(template_dir, item)
