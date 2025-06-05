@@ -1,3 +1,5 @@
 PyYAML
 jsonschema
 Pillow
+requests
+
