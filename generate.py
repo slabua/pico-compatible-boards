@@ -153,7 +153,15 @@ def main():
             board_data.setdefault('thumbnail', None)
 
             if board_data.get('image'):
-                board_data['thumbnail'] = generate_thumbnail(board_data['image'])
+                board_data['thumbnail'] = None
+                for _ in range(3):
+                    board_data['thumbnail'] = generate_thumbnail(board_data['image'])
+                    if board_data['thumbnail']:
+                        break
+
+                if board_data['thumbnail'] is None:
+                    data_valid = False
+                    break
 
             all_data.append(board_data)
 
