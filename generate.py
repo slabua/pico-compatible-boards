@@ -3,7 +3,11 @@ import json
 import os
 import re
 import shutil
+import base64
+import io
+import requests
 from jsonschema import validate, ValidationError
+from PIL import Image
 
 
 BOARD_SCHEMA = {
@@ -51,6 +55,40 @@ def parse_memory_size(size_str):
     return 0
 
 
+def generate_thumbnail(image_url, max_size=(64, 64), quality=85):
+    if not image_url:
+        return None
+
+    try:
+        print(f'\t\tDownloading image from: {image_url}')
+
+        image_data = requests.get(image_url).content
+
+        with Image.open(io.BytesIO(image_data)) as img:
+            if img.mode in ('RGBA', 'LA', 'P'):
+                background = Image.new('RGB', img.size, (255, 255, 255))
+
+                if img.mode == 'P':
+                    img = img.convert('RGBA')
+
+                if img.mode in ('RGBA', 'LA'):
+                    background.paste(img, mask=img.split()[-1])
+                    img = background
+            elif img.mode != 'RGB':
+                img = img.convert('RGB')
+
+            img.thumbnail(max_size, Image.Resampling.LANCZOS)
+
+            buffer = io.BytesIO()
+            img.save(buffer, format='JPEG', quality=quality, optimize=True)
+            buffer.seek(0)
+
+            return 'data:image/jpeg;base64,' + base64.b64encode(buffer.read()).decode('utf-8')
+    except Exception as e:
+        print(f'\t\tError generating thumbnail: {e}')
+        return None
+
+
 def main():
     boards_dir = 'boards'
     template_dir = 'page_template'
@@ -90,6 +128,10 @@ def main():
 
             board_data.setdefault('connectivity', [])
             board_data.setdefault('notes', '')
+            board_data.setdefault('thumbnail', None)
+
+            if board_data.get('image'):
+                board_data['thumbnail'] = generate_thumbnail(board_data['image'])
 
             all_data.append(board_data)
 

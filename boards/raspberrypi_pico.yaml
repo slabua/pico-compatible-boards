@@ -4,5 +4,5 @@ flash: "2 MB"
 ram: "264 KB"
 usb: "micro"
 smd: true
-image: "https://www.mouser.se/images/marketingid/2022/img/127818871.png"
+image: "https://shop.pimoroni.com/cdn/shop/products/PICOBOARDWHITEANGLE2.jpg"
 url: "https://www.raspberrypi.com/products/raspberry-pi-pico/"

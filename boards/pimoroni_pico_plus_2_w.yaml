@@ -5,6 +5,6 @@ ram: "520 KB"
 usb: "type-c"
 connectivity: ["wifi", "ble"]
 smd: false
-image: "https://shop.pimoroni.com/cdn/shop/files/pico-plus-2-w-2_768x768_crop_center.jpg"
+image: "https://shop.pimoroni.com/cdn/shop/files/pico-plus-2-w-2.jpg"
 url: "https://shop.pimoroni.com/products/pimoroni-pico-plus-2-w"
 notes: "8MB of PSRAM"
