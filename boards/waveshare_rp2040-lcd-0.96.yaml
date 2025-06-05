@@ -9,5 +9,5 @@ connectivity: []
 connectors: ["LiPo-MX1.25"]
 smd: false
 notes: "0.96\" LCD"
-image: "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/r/p/rp2040-lcd-0.96-1_6.jpg"
+image: "https://thepihut.com/cdn/shop/products/rp2040-lcd-waveshare-wav-20891-32026386661571.jpg"
 url: "https://www.waveshare.com/rp2040-lcd-0.96.htm"

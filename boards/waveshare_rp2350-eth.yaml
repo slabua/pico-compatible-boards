@@ -9,5 +9,5 @@ connectivity: ["Ethernet"]
 connectors: ["RJ45"]
 smd: false
 notes: "0.96\" LCD"
-image: "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/r/p/rp2350-eth-1.jpg"
+image: "https://thepihut.com/cdn/shop/files/ethernet-mini-development-board-rp2350-waveshare-wav-29266-72695910891905.jpg"
 url: "https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-pico-3/rp2350-eth.htm"

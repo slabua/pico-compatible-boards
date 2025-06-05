@@ -9,5 +9,5 @@ connectivity: ["WiFi", "BLE"]
 connectors: []
 smd: true
 notes: "2 MB of PSRAM"
-image: "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s3-pico-1.jpg"
+image: "https://thepihut.com/cdn/shop/files/esp32-s3-microcontroller-2-4-ghz-the-pi-hut-wav-23803-40436997521603.jpg"
 url: "https://www.waveshare.com/esp32-s3-pico.htm"

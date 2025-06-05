@@ -9,5 +9,5 @@ connectivity: ["WiFi"]
 connectors: []
 smd: true
 notes: "8 MB of PSRAM"
-image: "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s2-pico-1_2.jpg"
+image: "https://thepihut.com/cdn/shop/products/esp32-s2-wifi-development-board-pico-format-waveshare-wav-21178-34928232628419.jpg"
 url: "https://www.waveshare.com/esp32-s2.htm?sku=20624"
