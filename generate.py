@@ -5,6 +5,7 @@ import re
 import shutil
 import base64
 import io
+import time
 import requests
 from jsonschema import validate, ValidationError
 from PIL import Image
@@ -158,6 +159,8 @@ def main():
                     board_data['thumbnail'] = generate_thumbnail(board_data['image'])
                     if board_data['thumbnail']:
                         break
+
+                    time.sleep(5)
 
                 if board_data['thumbnail'] is None:
                     data_valid = False
