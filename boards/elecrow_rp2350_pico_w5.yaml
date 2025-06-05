@@ -1,0 +1,13 @@
+name: "Elecrow RP2350 Pico W5"
+chip: "RP2350"
+cores: "2x ARM Cortex-M33 + 2x RV32 Hazard3"
+flash: "8 MB"
+ram: "520 KB"
+usb: "type-c"
+dimensions: "21x51"
+connectivity: ["WiFi", "BLE"]
+connectors: []
+smd: true
+notes: ""
+image: "https://www.elecrow.com/media/catalog/product/cache/1917af0aa5ac872287906ce8b861b1aa/p/i/pico_w5_with_rp2350_chip_1.jpg"
+url: "https://www.elecrow.com/pico-w5-microcontroller-development-boards-rp2350-microcontroller-board.html"

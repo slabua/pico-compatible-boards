@@ -1,9 +1,13 @@
 name: ""
 chip: ""
+cores: ""
 flash: ""
 ram: ""
 usb: ""
+dimensions: ""
 connectivity: []
+connectors: []
 smd: true
+notes: ""
 image: ""
 url: ""

@@ -1,0 +1,13 @@
+name: "WIZnet Surf 5"
+chip: "W7500"
+cores: "ARM Cortex-M0"
+flash: "128 KB"
+ram: "32 KB"
+usb: "micro"
+dimensions: "21x75"
+connectivity: ["Ethernet"]
+connectors: ["RJ45"]
+smd: false
+notes: "Optional PoE support"
+image: "https://www.wiznet.hk/629-thickbox_default/surf-5.jpg"
+url: "https://docs.wiznet.io/Product/Open-Source-Hardware/surf5"

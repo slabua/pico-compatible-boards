@@ -1,0 +1,13 @@
+name: "Raspberry Pi Pico 1 W"
+chip: "RP2040"
+cores: "2x ARM Cortex-M0+"
+flash: "2 MB"
+ram: "264 KB"
+usb: "micro"
+dimensions: "21x51"
+connectivity: ["WiFi", "BLE"]
+connectors: []
+smd: true
+notes: ""
+image: "https://se.farnell.com/productimages/large/en_GB/3996082-40.jpg"
+url: "https://www.raspberrypi.com/products/raspberry-pi-pico/"

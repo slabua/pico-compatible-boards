@@ -1,0 +1,13 @@
+name: "Milk-V Duo 256M"
+chip: "SG2002"
+cores: "2x RV64 C906 + ARM Cortex-A53"
+flash: "0"
+ram: "64 MB"
+usb: "type-c"
+dimensions: "21x51"
+connectivity: []
+connectors: ["CSI", "microSD"]
+smd: true
+notes: ""
+image: "https://arace.tech/cdn/shop/files/Duo-04.jpg"
+url: "https://milkv.io/duo"

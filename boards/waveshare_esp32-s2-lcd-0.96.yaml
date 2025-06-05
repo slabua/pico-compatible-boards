@@ -1,0 +1,13 @@
+name: "Waveshare ESP32-S2-LCD-0.96"
+chip: "ESP32-S2"
+cores: "Xtensa LX7"
+flash: "4 MB"
+ram: "320 KB"
+usb: "type-c"
+dimensions: "21x54"
+connectivity: ["WiFi"]
+connectors: ["LiPo-MX1.25"]
+smd: false
+notes: "8 MB of PSRAM, 0.96\" LCD"
+image: "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/e/s/esp32-s2-lcd-0.96-1_2.jpg"
+url: "https://www.waveshare.com/esp32-s2.htm?sku=20658"

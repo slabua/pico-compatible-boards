@@ -1,0 +1,13 @@
+name: "Banana Pi BPI-Pico-RP2040"
+chip: "RP2040"
+cores: "2x ARM Cortex-M0+"
+flash: "2 MB"
+ram: "264 KB"
+usb: "type-c"
+dimensions: "21x56"
+connectivity: []
+connectors: ["qwiic"]
+notes: ""
+smd: true
+image: "https://docs.banana-pi.org/bpi-picow-s3/banana_pi_bpi-pico-rp2040_4.jpg"
+url: "https://docs.banana-pi.org/en/BPI-Pico-2040/BananaPi_BPI-Pico-2040"

@@ -1,0 +1,13 @@
+name: "Banana Pi BPI-PicoW-S3
+chip: "ESP32-S3"
+cores: "2x Xtensa LX7"
+flash: "8 MB"
+ram: "512 KB"
+usb: "micro"
+dimensions: "21x52"
+connectivity: ["WiFi", "BLE"]
+connectors: []
+smd: true
+notes: "2 MB of PSRAM"
+image: "https://docs.banana-pi.org/picture/bpi_picow_s3_pic.jpg"
+url: "https://docs.banana-pi.org/en/BPI-PicoW-S3/BananaPi_BPI-PicoW-S3"

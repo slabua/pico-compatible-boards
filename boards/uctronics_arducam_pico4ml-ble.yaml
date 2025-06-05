@@ -1,0 +1,13 @@
+name: "Uctronics Arducam Pico4ML-BLE"
+chip: "RP2040"
+cores: "2x ARM Cortex-M0+"
+flash: "2 MB"
+ram: "264 KB"
+usb: "micro"
+dimensions: "21x51"
+connectivity: []
+connectors: ["BLE"]
+smd: false
+notes: "No castellated edges, Camera, 0.96\" LCD"
+image: "https://cdn.tindiemedia.com/images/resize/-UGOU7NNcy60UbU6NgHGG9myU-U=/p/full-fit-in/2336x1752/i/292462/products/2021-09-06T07%3A01%3A28.704Z-B0330-02.jpg?1630886513"
+url: "https://www.tindie.com/products/uctronics/rp2040-dev-board-for-tinyml-bluetooth/"

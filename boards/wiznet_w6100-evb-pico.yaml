@@ -1,0 +1,13 @@
+name: "WIZnet W6100-EVB-Pico"
+chip: "RP2040"
+cores: "2x ARM Cortex-M0+"
+flash: "2 MB"
+ram: "264 KB"
+usb: "micro"
+dimensions: "21x75"
+connectivity: ["Ethernet"]
+connectors: ["RJ45"]
+smd: false
+notes: ""
+image: "https://docs.wiznet.io/assets/images/w6100-evb-pico-side-e4b400a89b30dd784efd14919392490b.png"
+url: "https://docs.wiznet.io/Product/iEthernet/W6100/w6100-evb-pico"

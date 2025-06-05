@@ -1,0 +1,13 @@
+name: "WIZnet W5500-EVB-Pico2"
+chip: "RP2350"
+cores: "2x ARM Cortex-M33 + 2x RV32 Hazard3"
+flash: "2 MB"
+ram: "520 KB"
+usb: "type-c"
+dimensions: "21x80"
+connectivity: ["Ethernet"]
+connectors: ["RJ45"]
+smd: false
+notes: ""
+image: "https://docs.wiznet.io/assets/images/w5500-evb-pico2-docs-d5b9eeb6d6e55b16be63850cbab2c222.png"
+url: "https://docs.wiznet.io/Product/iEthernet/W5500/w5500-evb-pico2"

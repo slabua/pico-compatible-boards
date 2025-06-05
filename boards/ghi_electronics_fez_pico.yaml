@@ -1,0 +1,13 @@
+name: "GHI Electronics FEZ Pico"
+chip: "SC13048"
+cores: "ARM Cortex-M4"
+flash: "16 MB"
+ram: "128 KB"
+usb: "type-c"
+dimensions: "21x51"
+connectivity: []
+connectors: ["Qwiic"]
+smd: true
+notes: ""
+image: "https://docs.ghielectronics.com/hardware/sitcore/images/fez-pico.png"
+url: "https://docs.ghielectronics.com/hardware/sitcore/sbc.html#fez-pico"

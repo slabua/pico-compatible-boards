@@ -1,0 +1,13 @@
+name: "WIZnet W5500-EVB-Pico"
+chip: "RP2040"
+cores: "2x ARM Cortex-M0+"
+flash: "2 MB"
+ram: "264 KB"
+usb: "micro"
+dimensions: "21x75"
+connectivity: ["Ethernet"]
+connectors: ["RJ45"]
+smd: false
+notes: ""
+image: "https://docs.wiznet.io/assets/images/w5500_evb_pico_side-da676c5d9c41adedc0469b9f1810b81b.png"
+url: "https://docs.wiznet.io/Product/iEthernet/W5500/w5500-evb-pico"

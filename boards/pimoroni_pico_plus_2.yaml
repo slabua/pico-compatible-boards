@@ -1,0 +1,13 @@
+name: "Pimoroni Pico Plus 2"
+chip: "RP2350"
+cores: "2x ARM Cortex-M33 + 2x RV32 Hazard3"
+flash: "16 MB"
+ram: "520 KB"
+usb: "type-c"
+dimensions: "21x51"
+connectivity: []
+connectors: ["Qwiic", "PiDebug", "SP/CE"]
+smd: false
+notes: "8 MB of PSRAM"
+image: "https://shop.pimoroni.com/cdn/shop/files/pico-plus-2-1.jpg"
+url: "https://shop.pimoroni.com/products/pimoroni-pico-plus-2?variant=42092668289107"

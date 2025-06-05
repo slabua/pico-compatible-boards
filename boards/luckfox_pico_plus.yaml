@@ -1,0 +1,13 @@
+name: "LuckFox Pico Plus"
+chip: "RV1103G1"
+cores: "ARM Cortex-A7"
+flash: "128 MB"
+ram: "64 MB"
+usb: "type-c"
+dimensions: "21x72"
+connectivity: ["Ethernet"]
+connectors: ["CSI", "microSD", "RJ45"]
+smd: false
+notes: ""
+image: "https://www.luckfox.com/image/cache/catalog/Luckfox-Pico-Plus/Luckfox-Pico-Plus-M-1-1000x1000w.jpg"
+url: "https://www.luckfox.com/Luckfox-Pico/EN-Luckfox-Pico-Plus"

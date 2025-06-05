@@ -1,9 +1,0 @@
-name: "Waveshare ESP32-C6-Pico"
-chip: "ESP32-C6"
-flash: "4 MB"
-ram: "512 KB"
-usb: "type-c"
-connectivity: ["wifi", "ble"]
-smd: true
-image: "https://www.waveshare.com/img/devkit/ESP32-C6-Pico/ESP32-C6-Pico-details-1.jpg"
-url: "https://www.waveshare.com/esp32-c6-pico.htm"

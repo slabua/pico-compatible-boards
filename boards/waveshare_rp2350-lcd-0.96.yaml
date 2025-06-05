@@ -1,0 +1,13 @@
+name: "Waveshare RP2350-LCD-0.96"
+chip: "RP2350"
+cores: "2x ARM Cortex-M33 + 2x RV32 Hazard3"
+flash: "4 MB"
+ram: "520 KB"
+usb: "type-c"
+dimensions: "21x51"
+connectivity: []
+connectors: ["LiPo-MX1.25"]
+smd: false
+notes: ""
+image: "https://www.waveshare.com/media/catalog/product/cache/1/image/800x800/9df78eab33525d08d6e5fb8d27136e95/r/p/rp2350-lcd-0.96-1.jpg"
+url: "https://www.waveshare.com/product/raspberry-pi/boards-kits/raspberry-pi-pico-3/rp2350-lcd-0.96.htm"

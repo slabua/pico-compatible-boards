@@ -1,0 +1,13 @@
+name: "WIZnet WizFi360-EVB-Pico"
+chip: "RP2040"
+cores: "2x ARM Cortex-M0+"
+flash: "2 MB"
+ram: "264 KB"
+usb: "micro"
+dimensions: "21x75"
+connectivity: ["WiFi"]
+connectors: []
+smd: true
+notes: ""
+image: "https://docs.wiznet.io/assets/images/WizFi360-EVB-Pico_Main-9b7c937889c2fa7b853d254b13df5ae1.png"
+url: "https://docs.wiznet.io/Product/Open-Source-Hardware/wizfi360-evb-pico"

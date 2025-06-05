@@ -1,0 +1,13 @@
+name: "WIZnet W55RP20-EVB-Pico"
+chip: "W55RP20"
+cores: "2x ARM Cortex-M0+"
+flash: "2 MB"
+ram: "264 KB"
+usb: "micro"
+dimensions: "21x80"
+connectivity: ["Ethernet"]
+connectors: ["RJ45"]
+smd: false
+notes: ""
+image: "https://docs.wiznet.io/assets/images/w55rp20-evb-pico-docs-8e041fe8924bed1c8d567c1c8b87628d.png"
+url: "https://docs.wiznet.io/Product/ioNIC/W55RP20/w55rp20-evb-pico"

@@ -1,0 +1,13 @@
+name: "Uctronics Arducam Pico4ML"
+chip: "RP2040"
+cores: "2x ARM Cortex-M0+"
+flash: "2 MB"
+ram: "264 KB"
+usb: "micro"
+dimensions: "21x51"
+connectivity: []
+connectors: []
+smd: false
+notes: "No castellated edges, Camera, 0.96” LCD"
+image: "https://cdn.tindiemedia.com/images/resize/sLH0REjSZPsyZRYLJM-690yKA20=/p/full-fit-in/2336x1752/i/292462/products/2021-03-22T00%3A43%3A32.477Z-b0302%20Arducam%20Pico4ML%20TinyML%20Dev%20Board%20for%20Raspberry%20Pi%20%282%29.jpg"
+url: "https://www.tindie.com/products/uctronics/rp2040-dev-board-for-tinyml-arducam-pico4ml/"

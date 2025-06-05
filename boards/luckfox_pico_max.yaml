@@ -1,0 +1,13 @@
+name: "Luckfox Pico Max"
+chip: "RV1106G3"
+cores: "ARM Cortex-A7"
+flash: "256 MB"
+ram: "256 MB"
+usb: "type-c"
+dimensions: "21x72"
+connectivity: ["Ethernet"]
+connectors: ["CSI", "microSD", "RJ45", "RTC"]
+smd: false
+notes: ""
+image: "https://www.luckfox.com/image/cache/catalog/Luckfox-Pico-Pro/Luckfox-Pico-Max-1-1000x1000w.jpg"
+url: "https://www.luckfox.com/EN-Luckfox-Pico-Pro?ci=530"

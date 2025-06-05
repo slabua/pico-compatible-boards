@@ -1,0 +1,13 @@
+name: "WIZnet W5100S-EVB-Pico2"
+chip: "RP2350"
+cores: "2x ARM Cortex-M33 + 2x RV32 Hazard3"
+flash: "2 MB"
+ram: "520 KB"
+usb: "type-c"
+dimensions: "21x80"
+connectivity: ["Ethernet"]
+connectors: ["RJ45"]
+smd: false
+notes: ""
+image: "https://docs.wiznet.io/assets/images/w5100s-evb-pico2-docs-277754aec922eb3d0b84962e01de98fa.png"
+url: "https://docs.wiznet.io/Product/iEthernet/W5100S/w5100s-evb-pico2"

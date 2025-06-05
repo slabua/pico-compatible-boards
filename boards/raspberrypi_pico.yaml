@@ -1,8 +1,0 @@
-name: "Raspberry Pi Pico"
-chip: "RP2040"
-flash: "2 MB"
-ram: "264 KB"
-usb: "micro"
-smd: true
-image: "https://shop.pimoroni.com/cdn/shop/products/PICOBOARDWHITEANGLE2.jpg"
-url: "https://www.raspberrypi.com/products/raspberry-pi-pico/"

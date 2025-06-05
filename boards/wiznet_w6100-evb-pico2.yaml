@@ -1,0 +1,13 @@
+name: "WIZnet W6100-EVB-Pico2"
+chip: "RP2350"
+cores: "2x ARM Cortex-M33 + 2x RV32 Hazard3"
+flash: "2 MB"
+ram: "520 KB"
+usb: "type-c"
+dimensions: "21x80"
+connectivity: ["Ethernet"]
+connectors: ["RJ45"]
+smd: false
+notes: ""
+image: "https://docs.wiznet.io/assets/images/w6100-evb-pico2-docs-0d662aa52a0089de8d06d14d756c1e12.png"
+url: "https://docs.wiznet.io/Product/iEthernet/W6100/w6100-evb-pico2"

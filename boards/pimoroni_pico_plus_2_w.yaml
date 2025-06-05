@@ -1,10 +1,13 @@
 name: "Pimoroni Pico Plus 2 W"
 chip: "RP2350"
+cores: "2x ARM Cortex-M33 + 2x RV32 Hazard3"
 flash: "16 MB"
 ram: "520 KB"
 usb: "type-c"
-connectivity: ["wifi", "ble"]
+dimensions: "21x51"
+connectivity: ["WiFi", "BLE"]
+connectors: ["Qwiic", "PiDebug"]
 smd: false
+notes: "8 MB of PSRAM"
 image: "https://shop.pimoroni.com/cdn/shop/files/pico-plus-2-w-2.jpg"
-url: "https://shop.pimoroni.com/products/pimoroni-pico-plus-2-w"
-notes: "8MB of PSRAM"
+url: "https://shop.pimoroni.com/products/pimoroni-pico-plus-2-w?variant=42182811942995"

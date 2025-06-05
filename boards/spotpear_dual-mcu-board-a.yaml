@@ -1,0 +1,13 @@
+name: "SpotPear Dual-MCU-Board-A"
+chip: "RP2040"
+cores: "2x ARM Cortex-M0+"
+flash: "4 MB"
+ram: "264 KB"
+usb: "type-c"
+dimensions: "21x51"
+connectivity: ["WiFi", "BLE"]
+connectors: []
+smd: false
+notes: "No castellated edges"
+image: "https://cdn.static.spotpear.com/uploads/picture/product/raspberry-pi/raspberry-pi-pico/dual-mcu-board-a/dual-mcu-board-a-07.jpg"
+url: "https://spotpear.com/index/product/detail/id/1355.html"
