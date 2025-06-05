@@ -186,7 +186,7 @@ $(document).ready(function()
 
             if (selectedOptions.length > 0) {
                 if (key === 'connectivity') {
-                    if (!row.connectivity || !selectedOptions.some(opt => row.connectivity.includes(opt))) {
+                    if (!row.connectivity || selectedOptions.some(opt => !row.connectivity.includes(opt))) {
                         matched = false;
                     }
                 } else if (key === 'smd') {
