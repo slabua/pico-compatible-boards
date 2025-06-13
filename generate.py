@@ -30,7 +30,7 @@ BOARD_SCHEMA = {
         'dimensions': { 'type': 'string' },
         'connectivity': {
             'type': 'array',
-            'items': { 'type': 'string', 'enum': [ 'WiFi', 'BLE', 'Lora', 'Zigbee', 'Ethernet' ] }
+            'items': { 'type': 'string', 'enum': [ 'WiFi', 'BLE', 'Lora', 'Zigbee', 'Ethernet', 'Thread' ] }
         },
         'connectors': {
             'type': 'array',
