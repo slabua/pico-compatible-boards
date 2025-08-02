@@ -1,0 +1,13 @@
+name: "SLBLabs SLIM2040"
+chip: "RP2040"
+cores: "2x ARM Cortex-M0+"
+flash: "2 MB"
+ram: "264 KB"
+usb: "micro"
+dimensions: "17x49"
+connectivity: []
+connectors: [Qwiic]
+smd: false
+notes: "https://www.elecrow.com/slim2040.html"
+image: "https://www.elecrow.com/media/catalog/product/cache/1917af0aa5ac872287906ce8b861b1aa/_/2/_2_2.png"
+url: "https://github.com/slabua/SLIM2040"
